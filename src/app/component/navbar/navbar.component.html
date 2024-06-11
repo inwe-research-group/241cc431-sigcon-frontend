@@ -1,0 +1,67 @@
+<nav class="navbar border-bottom border-body p-0" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img
+        width="50"
+        alt="Angular Logo"
+        src=".\assets\logo\Condosa_circular_blanco.png"
+      />
+      CONDOSA
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header color-navyblue">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body color-navyblue">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Home</a>
+          </li>
+          <li class="nav-item dropdown color-navyblue">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Opciones
+            </a>
+            <ul class="dropdown-menu color-navyblue">
+              <li>
+                <a class="dropdown-item" href="/registrar-persona"
+                  >01. Registrar Persona</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

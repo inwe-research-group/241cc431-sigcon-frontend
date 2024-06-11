@@ -1,0 +1,60 @@
+<div class="container">
+  <!-- Content here -->
+  <div class="row">
+    <div class="card bg-light bg-info mb-2">
+      <div class="card-header custom-style">Información del predio</div>
+
+      <div class="card-body form-group">
+        <form [formGroup]="predioForm" (ngSubmit)="registrarPredio()">
+          <div class="row">
+            <div class="col-2 mb-2">
+              <label for="nombrePredio">Nombre del predio:</label>
+            </div>
+
+            <div class="col-6 mb-2">
+              <input
+                type="text"
+                class="form-control"
+                id="nombrePredio"
+                formControlName="descripcion"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 mb-2">
+              <label for="direccion">Dirección:</label>
+            </div>
+
+            <div class="col-6 mb-2">
+              <input
+                type="text"
+                class="form-control"
+                id="direccion"
+                formControlName="direccion"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-2 mb-2">
+              <label for="codigoPostal">Código postal:</label>
+            </div>
+            <div class="col-6 mb-2">
+              <select
+                class="form-control form-select"
+                id="codigoPostal"
+                formControlName="idubigeo"
+                required
+              >
+                <!--<option *ngFor="let c of ubigeo" value="{{c.idubigeo}}">{{c.idubigeo}} - {{c.departamento}} - {{c.provincia}} - {{c.distrito}}</option>-->
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

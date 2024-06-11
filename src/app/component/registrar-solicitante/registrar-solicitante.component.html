@@ -1,0 +1,114 @@
+<div class="container">
+  <!-- Content here -->
+  <div class="row">
+    <div class="card">
+      <div class="card-header custom-style">Información del Solicitante</div>
+      <div class="card-body">
+        <form
+          class="form-group g-4 needs-validation"
+          [formGroup]="solicitanteForm"
+        >
+          <div class="row mb-2">
+            <label for="inputAPaterno" class="col-sm-3 col-form-label"
+              >Apellido Paterno:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAPaterno"
+                placeholder="Consigne el Apellido Paterno"
+                formControlName="apellido_paterno"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="inputAMaterno" class="col-sm-3 col-form-label"
+              >Apellido Materno:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAMaterno"
+                placeholder="Consigne el Apellido Materno"
+                formControlName="apellido_materno"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="inputNombres" class="col-sm-3 col-form-label"
+              >Nombres:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inputNombres"
+                placeholder="Consigne los Nombres"
+                formControlName="nombres"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="TipoDoc" class="col-sm-3 col-form-label"
+              >Tipo Documento:</label
+            >
+            <div class="col-sm-4">
+              <select
+                class="form-control form-select"
+                id="id_tipo_documento"
+                formControlName="id_tipo_documento"
+                (change)="seleccionarTipoDocumento($event)"
+              >
+                <option
+                  *ngFor="let tipodoc of tipodocumentoArray"
+                  value="{{ tipodoc.id_tipo_documento }}"
+                >
+                  {{ tipodoc.descripcion }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="NDoc" class="col-sm-3 col-form-label"
+              >N° Documento:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Consigne su N° de documento de identidad"
+                formControlName="n_documento"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="Telefono" class="col-sm-3 col-form-label"
+              >Telefono:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="phone"
+                class="form-control"
+                placeholder="Consigne su Telefono"
+                formControlName="telefono"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <label for="Correo" class="col-sm-3 col-form-label">Correo:</label>
+            <div class="col-sm-4">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="name@example.com"
+                formControlName="correo"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
