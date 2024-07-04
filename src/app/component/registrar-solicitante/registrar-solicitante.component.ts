@@ -59,6 +59,15 @@ export class RegistrarSolicitanteComponent {
     });
   }
 
+  buscarDNI(): void {
+    Swal.close();
+    Swal.fire({
+      icon: 'warning',
+      title: 'buscarDNI....',
+      text: '!Falta implementacion!',
+    });
+  }
+
   registrarSolicitante(): void {
     Swal.close();
     Swal.fire({

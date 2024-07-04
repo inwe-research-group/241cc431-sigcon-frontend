@@ -9,7 +9,7 @@
           [formGroup]="solicitanteForm"
         >
           <div class="row mb-2">
-            <label for="inputAPaterno" class="col-sm-3 col-form-label"
+            <label for="inputAPaterno" class="col-sm-2 col-form-label"
               >Apellido Paterno:</label
             >
             <div class="col-sm-4">
@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="inputAMaterno" class="col-sm-3 col-form-label"
+            <label for="inputAMaterno" class="col-sm-2 col-form-label"
               >Apellido Materno:</label
             >
             <div class="col-sm-4">
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="inputNombres" class="col-sm-3 col-form-label"
+            <label for="inputNombres" class="col-sm-2 col-form-label"
               >Nombres:</label
             >
             <div class="col-sm-4">
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="TipoDoc" class="col-sm-3 col-form-label"
+            <label for="TipoDoc" class="col-sm-2 col-form-label"
               >Tipo Documento:</label
             >
             <div class="col-sm-4">
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="NDoc" class="col-sm-3 col-form-label"
+            <label for="NDoc" class="col-sm-2 col-form-label"
               >N° Documento:</label
             >
             <div class="col-sm-4">
@@ -82,9 +82,18 @@
                 formControlName="n_documento"
               />
             </div>
+            <div class="col-sm-2">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                (click)="buscarDNI()"
+              >
+                Buscar
+              </button>
+            </div>
           </div>
           <div class="row mb-2">
-            <label for="Telefono" class="col-sm-3 col-form-label"
+            <label for="Telefono" class="col-sm-2 col-form-label"
               >Telefono:</label
             >
             <div class="col-sm-4">
@@ -97,7 +106,7 @@
             </div>
           </div>
           <div class="row mb-2">
-            <label for="Correo" class="col-sm-3 col-form-label">Correo:</label>
+            <label for="Correo" class="col-sm-2 col-form-label">Correo:</label>
             <div class="col-sm-4">
               <input
                 type="email"

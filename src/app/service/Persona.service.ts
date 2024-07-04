@@ -12,7 +12,6 @@ export class PersonaService {
 
   constructor(private http: HttpClient) {
     this.BASE_URL = getConexionBackend();
-    //console.log(this.BASE_URL);
   }
 
   getPersonas(): Observable<Persona[]> {
@@ -21,7 +20,7 @@ export class PersonaService {
   registrarPersona(form: any) {
     return this.http.post(`${this.BASE_URL}/persona/insert`, form);
   }
-  //agregado para soporte flask
+
   actualizarPersona(form: any) {
     return this.http.post(`${this.BASE_URL}/persona/update`, form);
   }
