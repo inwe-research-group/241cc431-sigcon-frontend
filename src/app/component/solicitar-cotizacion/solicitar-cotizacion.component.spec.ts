@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SolicitarCotizacionComponent } from './solicitar-cotizacion.component';
@@ -8,10 +9,9 @@ describe('SolicitarCotizacionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SolicitarCotizacionComponent]
-    })
-    .compileComponents();
-    
+      imports: [SolicitarCotizacionComponent, HttpClientModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(SolicitarCotizacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

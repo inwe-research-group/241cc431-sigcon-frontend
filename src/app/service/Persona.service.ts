@@ -1,33 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { getConexionBackend } from '../utils/constants';
+import { BASE_URL } from '../utils/constants';
 import { Persona } from '../model/Persona';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PersonaService {
-  BASE_URL: string | undefined;
-
-  constructor(private http: HttpClient) {
-    this.BASE_URL = getConexionBackend();
-  }
+  constructor(private http: HttpClient) {}
 
   getPersonas(): Observable<Persona[]> {
-    return this.http.get<Persona[]>(`${this.BASE_URL}/persona/listar`);
+    return this.http.get<Persona[]>(`${BASE_URL}/persona/listar`);
   }
   registrarPersona(form: any) {
-    return this.http.post(`${this.BASE_URL}/persona/insert`, form);
+    return this.http.post(`${BASE_URL}/persona/insert`, form);
   }
 
   actualizarPersona(form: any) {
-    return this.http.post(`${this.BASE_URL}/persona/update`, form);
+    return this.http.post(`${BASE_URL}/persona/update`, form);
   }
 
   eliminarPersona(persona: Persona) {
-    return this.http.delete(`${this.BASE_URL}/persona/delete`, {
+    return this.http.delete(`${BASE_URL}/persona/delete`, {
       body: persona,
     });
+  }
+  searchByNDocumento(ndocumento: String): Observable<Persona[]> {
+    return this.http.get<Persona[]>(
+      `${BASE_URL}/persona/searchByNDocumento/${ndocumento}`
+    );
   }
 }

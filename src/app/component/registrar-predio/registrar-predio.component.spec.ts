@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistrarPredioComponent } from './registrar-predio.component';
@@ -8,10 +9,9 @@ describe('RegistrarPredioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegistrarPredioComponent]
-    })
-    .compileComponents();
-    
+      imports: [RegistrarPredioComponent, HttpClientModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RegistrarPredioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

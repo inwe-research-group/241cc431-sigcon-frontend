@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegistrarPersonaComponent } from './registrar-persona.component';
@@ -8,10 +9,9 @@ describe('RegistrarPersonaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegistrarPersonaComponent]
-    })
-    .compileComponents();
-    
+      imports: [RegistrarPersonaComponent, HttpClientModule],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RegistrarPersonaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
