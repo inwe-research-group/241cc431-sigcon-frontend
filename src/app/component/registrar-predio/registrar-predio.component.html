@@ -5,7 +5,31 @@
       <div class="card-header custom-style">Información del predio</div>
 
       <div class="card-body form-group">
-        <form [formGroup]="predioForm" (ngSubmit)="registrarPredio()">
+        <form [formGroup]="predioForm">
+          <div class="row">
+            <div class="col-2 mb-2">
+              <label for="nombrePredio">RUC del predio:</label>
+            </div>
+
+            <div class="col-2 mb-2">
+              <input
+                type="text"
+                class="form-control"
+                id="rucPredio"
+                formControlName="ruc"
+                required
+              />
+            </div>
+            <div class="col-sm-2">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                (click)="buscarPredio()"
+              >
+                Buscar
+              </button>
+            </div>
+          </div>
           <div class="row">
             <div class="col-2 mb-2">
               <label for="nombrePredio">Nombre del predio:</label>

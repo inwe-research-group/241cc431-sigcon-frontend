@@ -22,6 +22,7 @@ export class RegistrarPredioComponent {
   constructor(private predioService: PredioService) {
     this.predioForm = new FormGroup({
       id_predio: new FormControl(''),
+      ruc: new FormControl('', [Validators.required, Validators.minLength(4)]),
       descripcion: new FormControl('', [
         Validators.required,
         Validators.minLength(4),
@@ -42,6 +43,14 @@ export class RegistrarPredioComponent {
     Swal.fire({
       icon: 'warning',
       title: 'registrarSolicitante....',
+      text: '!Falta implementacion!',
+    });
+  }
+  buscarPredio(): void {
+    Swal.close();
+    Swal.fire({
+      icon: 'warning',
+      title: 'buscarPredio....',
       text: '!Falta implementacion!',
     });
   }
