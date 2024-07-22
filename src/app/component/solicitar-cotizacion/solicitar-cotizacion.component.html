@@ -1,7 +1,11 @@
 <div class="container">
-  <h1 class="mt-3 mb-3">Solicitud de Cotizacion</h1>
-  <app-registrar-solicitante></app-registrar-solicitante>
-  <app-registrar-predio></app-registrar-predio>
+  <h1 class="mt-3 mb-3">Solicitud de Cotizacion{{ n_solicitud }}</h1>
+  <app-registrar-solicitante
+    (id_solicitante_out)="obtenerIdSolicitante($event)"
+  ></app-registrar-solicitante>
+  <app-registrar-predio
+    (id_predio_out)="obtenerIdPredio($event)"
+  ></app-registrar-predio>
   <div class="row">
     <div class="card">
       <div class="card-header custom-style">Información de la Solicitud</div>

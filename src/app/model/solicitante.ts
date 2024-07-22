@@ -6,7 +6,7 @@ export interface Solicitante {
   id_persona: number;
   id_rol: number;
   correo: string;
-  telefono: string;
+  telefono: number;
   persona: Persona;
   rol: Rol;
 }

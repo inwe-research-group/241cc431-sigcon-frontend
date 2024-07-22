@@ -24,7 +24,7 @@
               <button
                 type="submit"
                 class="btn btn-primary"
-                (click)="buscarPredio()"
+                (click)="searchByRuc()"
               >
                 Buscar
               </button>
@@ -69,11 +69,17 @@
             <div class="col-6 mb-2">
               <select
                 class="form-control form-select"
-                id="codigoPostal"
+                id="idubigeo"
                 formControlName="idubigeo"
-                required
+                (change)="seleccionarUbigeo($event)"
               >
-                <!--<option *ngFor="let c of ubigeo" value="{{c.idubigeo}}">{{c.idubigeo}} - {{c.departamento}} - {{c.provincia}} - {{c.distrito}}</option>-->
+                <option
+                  *ngFor="let ubigeo of ubigeoArray"
+                  value="{{ ubigeo.idubigeo }}"
+                >
+                  {{ ubigeo.idubigeo }} - {{ ubigeo.departamento }} -
+                  {{ ubigeo.provincia }} - {{ ubigeo.distrito }}
+                </option>
               </select>
             </div>
           </div>
